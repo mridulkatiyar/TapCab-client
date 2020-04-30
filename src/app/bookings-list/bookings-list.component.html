@@ -1,0 +1,48 @@
+<div class="panel panel-primary">
+    <div class="panel-heading">
+      <h2>Bookings with TapCab</h2>
+    </div>
+    <div class="panel-body">
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th>Booking Id</th>
+            <th>Passenger Name</th>
+            <th>Passenger Phone No</th>
+            <th>Car Type</th>
+            <th>Persons Travelling</th>
+            <th>Pick-Up Time</th>
+            <th>Approx. Fare</th>
+            <th>Ride Status</th>
+            <th> Cab Id</th>
+            <th>PickUp Address</th>
+            <th>Pick-Up City</th>
+            <th>Destination Address</th>
+            <th>Destination City</th>
+         <!--   <th>Actions</th>  -->
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let booking of bookings | async">
+            <td>{{ booking.bookingId }}</td>
+            <td>{{ booking.name }}</td>
+            <td>{{ booking.phoneNo }}</td>
+            <td>{{ booking.carType }}</td>
+            <td>{{ booking.numberOfPersons }}</td>
+            <td>{{ booking.pickUpTime }}</td>
+            <td>{{ booking.fare }}</td>
+            <td>{{ booking.status }}</td>
+            <td>{{ booking.cabId }}</td>
+            <td>{{ booking.pickUpAddress }}</td>
+            <td>{{ booking.pickUpCity }}</td>
+            <td>{{ booking.destiAddress }}</td>
+            <td>{{ booking.destiCity }}</td>
+          <td> 
+              <button (click)="manageBooking(booking.bookingId,booking.status)" class="btn btn-secondary" style="margin-left: 10px">Manage</button> 
+            </td>  
+
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>

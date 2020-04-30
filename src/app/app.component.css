@@ -1,0 +1,16 @@
+
+a {
+    padding: 1.5em;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: aliceblue;
+    font-size: 16px;
+    }
+
+    
+    a:hover {
+    background: rgb(109, 158, 221);
+    }
+    nav {
+        justify-self: right;
+        }

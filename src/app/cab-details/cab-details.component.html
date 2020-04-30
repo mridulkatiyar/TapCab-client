@@ -1,0 +1,27 @@
+<h2>Cab Details</h2>
+
+<hr/>
+<div *ngIf="cab">
+<div>
+<label><b> Cab Id: </b></label> {{cab.cabId}}
+</div>
+<div>
+<label><b>Cab Name: </b></label> {{cab.cabName}}
+</div>
+<div>
+<label><b>Cab Registration No: </b></label> {{cab.cabRegistraionNumber}}
+</div>
+<div>
+<label><b>Cab Color: </b></label> {{cab.cabColor}}
+</div>
+<div>
+<label><b>Cab Driver Name: </b></label> {{cab.cabDriverName}}
+</div>
+<div>
+    <label><b>Cab Driver No: </b></label> {{cab.cabDriverPhoneNumber}}
+    </div>
+</div>
+
+<br>
+<br>
+<button (click)="list()" class="btn btn-primary">Back to Cabs List</button><br>

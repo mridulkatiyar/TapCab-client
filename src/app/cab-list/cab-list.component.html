@@ -1,0 +1,36 @@
+<div class="panel panel-primary">
+    <div class="panel-heading">
+      <h2>Cab List</h2>
+    </div>
+    <div class="panel-body">
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th>Cab Id</th>
+            <th>Cab Name</th>
+            <th>Cab Registration No</th>
+            <th>Cab Color</th>
+            <th>Cab Driver No</th>
+            <th>Cab Driver Name</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let cab of cabs | async">
+            <td>{{ cab.cabId }}</td>
+            <td>{{ cab.cabName }}</td>
+            <td>{{ cab.cabRegistraionNumber }}</td>
+            <td>{{ cab.cabColor }}</td>
+            <td>{{ cab.cabDriverPhoneNumber }}</td>
+            <td>{{ cab.cabDriverName }}</td>
+            <td><button (click)="deleteCab(cab.cabId)" class="btn btn-danger">Delete</button>
+              <button (click)="editCab(cab.cabId)" class="btn btn-secondary" style="margin-left: 10px">Update</button> 
+                <button (click)="cabDetails(cab.cabId)" class="btn btn-info" style="margin-left: 10px">Details</button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  

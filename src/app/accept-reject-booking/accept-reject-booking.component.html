@@ -1,0 +1,22 @@
+<h3>ACCEPT/REJECT</h3>
+<div [hidden]="submitted" style="width: 400px;">
+  <form (ngSubmit)="onSubmit()">
+
+
+    <div class="form-group">
+        <label for="name">Booking ID</label>
+        <input type="number" class="form-control" id="bookingId" required readonly [(ngModel)]="booking.bookingId" name="bookingId">
+      </div>
+      <div class="form-group">
+        <label for="name">Enter Cab ID</label>
+        <input type="number" class="form-control" id="cabId" required [(ngModel)]="booking.cabId" name="cabId">
+      </div>
+    <div class="form-group">
+      <label for="name">Enter Fare</label>
+      <input type="number" class="form-control" id="fare" required [(ngModel)]="booking.fare" name="fare">
+    </div>
+
+      <button type="submit" class="btn btn-success">Initiate Cab Booking</button><br><br>
+  </form>
+  <button (click)="reject()" class="btn btn-success">REJECT Cab Booking</button>
+</div>
